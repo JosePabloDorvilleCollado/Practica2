@@ -13,5 +13,81 @@
 
 <p>Una caracter&iacute;	stica que no se suele tener en cuenta en los enlaces es que están formados por dos extremos y un sentido. En otras palabras, el enlace comienza en un recurso y apunta hacia otro recurso. Cada uno de los dos extremos se llaman "anchors" en ingl&eacute;s, que se puede traducir literalmente como "anclas".</p><br>
 <img src="https://pbs.twimg.com/profile_images/616309728688238592/pBeeJQDQ.png" width="200"/>
+<h2>4.1. URL</h2>
+
+<p>Antes de empezar a crear enlaces, es necesario comprender y dominar el concepto de URL. El acrónimo URL (del inglés Uniform Resource Locator) hace referencia al identificador único de cada recurso disponible en Internet. Las URL son esenciales para crear los enlaces, pero también se utilizan en otros elementos HTML como las imágenes y los formularios.</p>
+
+<h2>La URL de un recurso tiene dos objetivos principales:</h2>
+<ul>
+<li>Identificar de forma única a ese recurso</li>
+<li>Permitir localizar de forma eficiente ese recurso</li>
+</ul>
+
+<p>En primer lugar, las URL permiten que cada página HTML publicada en Internet tenga un nombre único que permita diferenciarla de las demás. De esta forma es posible crear enlaces que apunten de forma inequívoca a una determinada página.</p>
+
+<h3>Si se accede a la página principal de Google, la dirección que muestra el navegador es:</h3>
+
+<p>http://www.google.com
+La cadena de texto http://www.google.com es la URL completa de la página principal de Google. La URL de las páginas es imprescindible para crear los enlaces, ya que permite distinguir una página de otra.</p>
+
+<p>El segundo objetivo de las URL es el de permitir la localización eficiente de cada recurso de Internet. Para ello es necesario comprender las diferentes partes que forman las URL. Una URL sencilla siempre está formada por las mismas tres partes. Si por ejemplo se considera la siguiente URL:</p>
+
+<br>http://www.librosweb.es/xhtml/capitulo4.html
+<ul>Las partes que componen la URL anterior son:
+
+<li>Protocolo (http://): el mecanismo que debe utilizar el navegador para acceder a ese recurso. Todas las páginas web utilizan http://. Las páginas web seguras (por ejemplo las de los bancos y las de los servicios de email) utilizan https:// (se añade una letra s).</li>
+<li>Servidor (www.librosweb.es): simplificando mucho su explicación, se trata del ordenador en el que se encuentra guardada la página que se quiere acceder. Los navegadores son capaces de obtener la dirección de cada servidor a partir de su nombre.</li>
+<li>Ruta (/xhtml/capitulo4.html): camino que se debe seguir, una vez que se ha llegado al servidor, para localizar el recurso específico que se quiere acceder.</li>
+<li>Por tanto, las URL no sólo identifican de forma única a cada recurso de Internet, sino que también proporcionan a los navegadores la información necesaria para poder llegar hasta ese recurso.</li>
+
+<h3>La mayoría de URL son tan sencillas como la URL mostrada anteriormente. No obstante, existen URL complejas formadas por más partes.<h3>
+
+<br>http://www.alistapart.com/comments/webstandards2008?page=5#42
+<ul>Las cinco partes que forman la URL anterior son:
+
+<li>Protocolo (http://)</li>
+<li>Servidor (www.alistapart.com)</li>
+<li>Ruta (/comments/webstandards2008)</li>
+<li>Consulta (?page=5): información adicional necesaria para que el servidor localice correctamente el recurso que se quiere acceder. Siempre comienza con el carácter ? y contiene una sucesión de palabras separadas por = y & </li>
+<li>Sección (#42): permite que el navegador se posicione automáticamente en una sección de la página web. Siempre comienza con el caracter #</li>
+
+<p>Como las URL utilizan los caracteres :, =, & y / para separar sus partes, estos caracteres están reservados y no se pueden utilizar libremente. Además, algunos caracteres no están reservados pero pueden ser problemáticos si se utilizan en la propia URL.</p>
+
+<p>Si es necesario incluir estos caracteres reservados y especiales en una URL, se sustituyen por combinaciones de caracteres seguros. Esta sustitución se denomina codificación de caracteres y el servidor realiza el proceso inverso (decodificación) cuando le llega una URL con los caracteres codificados.</p>
+
+A continuación se muestra la tabla para codificar los caracteres más comunes:
+
+Carácter original	Carácter codificado	Carácter original	Carácter codificado
+/	%2F	?	%3F
+:	%3A	@	%40
+=	%3D	&	%26
+"	%22	\	%5C
+'	%60	~	%7E
+(espacio en blanco)	%20	#	%23
+Por otra parte, aunque desde hace tiempo ya es posible incluir en las URL caracteres de otros idiomas que no sean el inglés, aún no es completamente seguro utilizar estos caracteres en las URL. Si se utilizan letras como ñ, á, é o ç, es posible que algunos navegadores no las interpreten de forma correcta.
+
+La solución consiste en codificar todos los caracteres que no existen en inglés. La siguiente tabla muestra la codificación de los caracteres más utilizados:
+
+Carácter original	Carácter codificado	Carácter original	Carácter codificado
+ñ	%F1	Ñ	%D1
+á	%E1	Á	%C1
+é	%E9	É	%C9
+í	%ED	Í	%CD
+ó	%F3	Ó	%D3
+ú	%FA	Ú	%DA
+ç	%E7	Ç	%C7
+Teniendo en cuenta las dos tablas anteriores de codificación de caracteres, es fácil crear las URL correctas sin caracteres problemáticos:
+
+<!-- URL problemática -->
+http://www.ejemplo.com/estaciones/otoño.html
+ 
+<!-- URL correcta -->
+http://www.ejemplo.com/estaciones/oto%F1o.html
+ 
+<!-- URL problemática -->
+http://www.ejemplo.com/ruta/nombre página.html
+ 
+<!-- URL correcta -->
+http://www.ejemplo.com/ruta/nombre%20p%E1gina.html
 </body>
 </html>
