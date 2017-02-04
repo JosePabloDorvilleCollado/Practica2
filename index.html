@@ -1,8 +1,10 @@
 <html>
-<head> <h2>Practica 2:Enlaces, tabla & Github.</h2></head>
+<head> Practica 2:Enlaces, tabla & Github. </head>
 <body> 
-<h2><p>Cap&iacute;tulo 4. Enlaces</p></h2>
-
+<h1>Cap&iacute;tulo 4. Enlaces</h1>
+<a name=inicio> </a>
+<a href=#abajo>	Ir mis enlaces</a>
+<a href=#mitad>	Ir a URL</a>
 <p>El lenguaje de marcado HTML se defini&oacute; teniendo en cuenta algunas de las caracter&iacute;	sticas que exist&iacute;an en ese momento para la publicaci&oacute;n digital de contenidos. Entre los conceptos utilizados en su creaci&oacute; n, se encuentra el mecanismo de "hipertexto".</p>
 
 <p>De hecho, las letras "HT" de la sigla HTML significan "hipertexto" (hypertext en ingl&eacute;s), por lo que el significado completo de HTML podr&iacute;	a traducirse como "lenguaje de marcado para hipertexto".</p>
@@ -15,6 +17,7 @@
 <im src="https://pbs.twimg.com/profile_images/616309728688238592/pBeeJQDQ.png" width="500" height="500"/>
 <img src="C:\Users\00140163\Desktop\Practica2\Imagenes\img1.png" width="500" height="500" /> 
 <img src="imagenes/img1.png" width="500" height="500" /> 
+<a name=mitad> </a>
 <h2>4.1. URL</h2>
 
 <p>Antes de empezar a crear enlaces, es necesario comprender y dominar el concepto de URL. El acrónimo URL (del inglés Uniform Resource Locator) hace referencia al identificador único de cada recurso disponible en Internet. Las URL son esenciales para crear los enlaces, pero también se utilizan en otros elementos HTML como las imágenes y los formularios.</p>
@@ -28,7 +31,7 @@
 <p>En primer lugar, las URL permiten que cada página HTML publicada en Internet tenga un nombre único que permita diferenciarla de las demás. De esta forma es posible crear enlaces que apunten de forma inequívoca a una determinada página.</p>
 
 <h3>Si se accede a la página principal de Google, la dirección que muestra el navegador es:</h3>
-<br>"http://www.google.com" <br>
+<a href="http://www.google.com">A ver pagina</a>
 <p>La cadena de texto http://www.google.com es la URL completa de la página principal de Google. La URL de las páginas es imprescindible para crear los enlaces, ya que permite distinguir una página de otra.</p>
 <img src="imagenes/img2.gif" width="500" height="500" /> 
 <p>El segundo objetivo de las URL es el de permitir la localización eficiente de cada recurso de Internet. Para ello es necesario comprender las diferentes partes que forman las URL. Una URL sencilla siempre está formada por las mismas tres partes. Si por ejemplo se considera la siguiente URL:</p>
@@ -40,12 +43,18 @@ http://www.librosweb.es/xhtml/capitulo4.html
 <li>Ruta (/xhtml/capitulo4.html): camino que se debe seguir, una vez que se ha llegado al servidor, para localizar el recurso específico que se quiere acceder.</li>
 <li>Por tanto, las URL no sólo identifican de forma única a cada recurso de Internet, sino que también proporcionan a los navegadores la información necesaria para poder llegar hasta ese recurso.</li>
 </ul>
+<p><h2>Mis Enlaces</h2>
+<a name=abajo> </a>
+<a href="Tablas/Tabla1.html">a ver la tabla basica</br></a>
+<a href="Tablas/Tabla2.html">O mejor aun,Vea la tabla irregular</a>
+</br>
+<a href=#inicio>Ir arriba</a> 
 <h3>La mayoría de URL son tan sencillas como la URL mostrada anteriormente. No obstante, existen URL complejas formadas por más partes.</h3>
-<p>http://www.alistapart.com/comments/webstandards2008?page=5#42</p>
+<a href="http://www.alistapart.com/comments/webstandards2008?page=5#42"></a>
 <h2>Las cinco partes que forman la URL anterior son:</h2> 
 <ul>
 <li>Protocolo (http://)</li>
-<li>Servidor (www.alistapart.com)</li>
+<li>Servidor (www.alistapart.com)</li>   
 <li>Ruta (/comments/webstandards2008)</li>
 <li>Consulta (?page=5): información adicional necesaria para que el servidor localice correctamente el recurso que se quiere acceder. Siempre comienza con el carácter ? y contiene una sucesión de palabras separadas por = y & </li>
 <li>Sección (#42): permite que el navegador se posicione automáticamente en una sección de la página web. Siempre comienza con el caracter #</li>
@@ -94,33 +103,5 @@ http://www.ejemplo.com/ruta/nombre página.html</li>
 <li> URL correcta <br>
 http://www.ejemplo.com/ruta/nombre%20p%E1gina.html</li>
 </ul>
-<table border=2>
-<!-- Primera Fila-->
-<tr> 
-<td>Elemento</td>
-<td>Valor</td>
-</tr>
-<!-- Segunda Fila-->
-<tr>
-<td>Página origen</td>
-<td>http://www.ejemplo.com/ruta1/ruta2/ruta3/pagina1.html</td>
- </tr>
- <!-- Tercera Fila-->
-<tr> 
-<td>Página enlazada	</td>
-<td>Página web llamada pagina2.html y que se encuentra en el mismo directorio</td>
-</tr>
-<!-- Cuarta Fila-->
-<tr> 
-<td>URL absoluta</td>
-<td>http://www.ejemplo.com/ruta1/ruta2/ruta3/pagina2.html</td>
-</tr>
-<!-- Quinta Fila-->
-<tr> 
-<td>URL relativa</td>
-<td>pagina2.html</td>
-</tr>
-<!-- Sexta Fila-->
-</table>
 </body>
 </html>
